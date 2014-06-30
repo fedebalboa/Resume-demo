@@ -1,0 +1,107 @@
+@font-face {
+    font-family: 'alfaslab';
+    src: url('../fonts/alfaslabone.eot');
+    src: url('../fonts/alfaslabone.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/alfaslabone.woff') format('woff'),
+         url('../fonts/alfaslabone.ttf') format('truetype'),
+         url('../fonts/alfaslabone.svg#alfa_slab_oneregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {background:url(../img/noise.png);
+
+		margin: 0;
+		padding: 0;
+		height: 100%;
+
+}
+.main {
+
+	background: white;
+	position: relative;
+	margin: 0 auto;
+	height: 100%;
+	width: 80%;
+	padding: 20px;
+
+}
+.main::after {
+
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 10px;
+	left: 10px;
+	background-color: #761c1f;
+	z-index: -1;
+
+}
+h1 {text-align: center;}
+h3 {font-family: 'alfaslab';}
+
+li {
+
+	list-style: none;
+	padding-top: 5px;
+}
+
+li::before {
+
+	content:"➤";
+	color: red;
+	padding: 5px;
+}
+
+img {margin: 0 auto;}
+a:link {text-decoration: none;}
+a.brilla, a.brilla:hover, a.brilla:focus {
+	
+	text-decoration: none;
+	color: #5f5fb9;
+	text-shadow: none;
+	-webkit-transition: 500ms linear 0s;
+	-moz-transition: 500ms linear 0s;
+	-o-transition: 500ms linear 0s;
+	transition: 500ms linear 0s;
+	outline: 0 none;
+}
+
+/* mouse over link */
+a.brilla:hover , a.brilla:focus{
+
+	color: #fff;
+	text-shadow: -1px 1px 8px black, 1px -1px 8px red;
+}
+
+.avatar {
+	position: absolute;
+	width: 164px;
+	height: 164px;
+	border-radius: 50%;
+	background-color: blue;
+	top:150px;
+	left:700px;
+	float: left;
+	background-image: url(../img/me.jpg);
+	background-repeat: no-repeat;
+	transition: all 0.5s;
+}
+
+#footer {
+
+	position: absolute;
+	bottom: 0;
+	height: 20px;
+	width: 100%;
+	background-color: #433f3f;
+} 
+
+@media all and (max-width: 1070px) {
+
+  .avatar {
+    display: none;
+  }
+}
